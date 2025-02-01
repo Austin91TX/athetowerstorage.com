@@ -5,6 +5,8 @@
 <head>
     <title>At the Tower RV &amp; Boat Storage - Your Williamson County Storage Solution</title>
     <link href="http://fonts.googleapis.com/css?family=Pompiere" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
     <style>
         body {
             background-color: darkblue;
@@ -99,14 +101,12 @@
             font-size: 1.2em;
         }
 
-        img#storage {
-            box-shadow: 10px 10px 5px #000;
-            border: 1px solid #000;
+        #storage {
+            max-width: 100%;
         }
 
-        #map {
-            box-shadow: 10px 10px 5px #000;
-            border: 1px solid #000;
+        #storage img {
+          max-width: 100%;
         }
 
         .clear {
@@ -142,7 +142,32 @@
         <h1>At the Tower</h1>
         <h2>RV &amp; Boat Storage</h2>
         <h3>We're your Williamson County storage solution!</h3>
-        <img src="images/storage.png" id="storage" alt="Our Storage" />
+        <div class="glide" id="storage">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <img src="images/storage2025.jpg" />
+              </li>
+              <li class="glide__slide">
+                <img src="images/storageleft2025.jpg" />
+              </li>
+              <li class="glide__slide">
+                <img src="images/storageright2025.jpg" />
+              </li>
+              <li class="glide__slide">
+                <img src="images/storagetire2025.jpg" />
+              </li>
+              <li class="glide__slide">
+                <img src="images/storagewide2025.jpg" />
+              </li>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+          </div>
+        </div>
+        
 
         <div id="content">
             <div style="width: 100%; height: auto;">
@@ -174,7 +199,7 @@
                 </div>
                 <div class="right">
                     <ul>
-                        <li>Access 6am - 10pm, 24 hour access upon request</li>
+                        <li>24 hour access</li>
                         <li>Attendant on site</li>
                         <li>Monitored</li>
                         <li>Air, water and trash available</li>
@@ -182,15 +207,25 @@
                     </ul>
                 </div>
             </div>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4Xe6IPb6rzI?si=4E3ZTFiVb-yQCt9i&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
 
 
         <div id="footer">
-            &copy;Copyright 2021. At the Tower RV &amp; Boat Storage. All Rights Reserved.
+            &copy;Copyright 2025. At the Tower RV &amp; Boat Storage. All Rights Reserved.
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+      new Glide('#storage', {
+        autoplay: 3000,
+        hoverpause: true,
+        gap: 0,
+      }).mount()
+    </script>
 </body>
 </html>
 <!--
